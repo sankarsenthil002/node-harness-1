@@ -32,7 +32,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: gcr.io/refreshing-glow-372901/hello-world
+      - image: us-central1-docker.pkg.dev/ refreshing-glow-372901/quickstart-docker-repo/hello-world:tag1
         name: hello-world
         ports:
         - containerPort: 3300
