@@ -12,7 +12,7 @@ spec:
     tier: frontend
   type: LoadBalancer
 ---
-apiVersion: apps/ v4.5.7
+apiVersion: apps/v4.5.7
 kind: Deployment
 metadata:
   name: hello-world
