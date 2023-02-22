@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Build Docker Image
           command: |
-            docker build -t hello-Senthil .
+            docker build -t hello-senthil .
           environment:
             DOCKER_USER: sankarsenthil002
             DOCKER_PASS: dckr_pat_RtWLXQwc99nKTeoB0VPLxvjk510
