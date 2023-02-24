@@ -17,5 +17,5 @@ jobs:
           name: Push Docker Image
           command: |
             echo $DOCKER_PASS | docker login -u sankarsenthil002 -p dckr_pat_RtWLXQwc99nKTeoB0VPLxvjk510
-            docker tag hello-world:latest sankarsenthil002/helloworld:latest
+            docker tag hello-senthil:latest sankarsenthil002/helloworld:latest
             docker push sankarsenthil002/helloworld:latest
