@@ -1,39 +1,21 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: hello-world
-  labels:
-    app: hello-world
-spec:
-  ports:
-    - port: 3300
-  selector:
-    app: hello-world
-    tier: frontend
-  type: LoadBalancer
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: service-deployment
   labels:
-    app: hello-world
+    app: helloworld
 spec:
+  replicas: 3
   selector:
     matchLabels:
-      app: hello-world
-      tier: frontend
-  strategy:
-    type: Recreate
+      app: helloworld
   template:
     metadata:
       labels:
-        app: hello-world
-        tier: frontend
+        app: helloworld
     spec:
       containers:
-      - image: us-central1-docker.pkg.dev/refreshing-glow-372901/quickstart-docker-repo/hello-world@sha256:f01c39d7dc9bff6475b855fe3a94a5233955696b3b8090222807010230a553c6
-        name: hello-world
+      - name: hello-world
+        image: us-central1-docker.pkg.dev/refreshing-glow-372901/quickstart-docker-repo/hello-world:tag1
         ports:
-        - containerPort: 3300
-          name: hello-world
+        - containerPort: 8800
