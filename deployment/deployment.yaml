@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: us-central1-docker.pkg.dev/refreshing-glow-372901/quickstart-docker-repo/hello-world:tag1
+        image: <+artifact.image>
         ports:
-        - containerPort: 8800
+        - containerPort: 80        
