@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: <+artifact.image>
+        image: sankarsenthil002/helloworld
         ports:
         - containerPort: 80        
